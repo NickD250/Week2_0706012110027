@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardImageHewan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/CardButtonEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/CardNamaHewan">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/CardPicture"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@mipmap/ic_launcher" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/CardNamaHewan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Nama"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/CardImageHewan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Sound"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/CardNamaHewan"
+                app:layout_constraintTop_toBottomOf="@+id/CardNamaHewan"
+                app:srcCompat="@drawable/ic_baseline_celebration_24" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="Usia :"
+                app:layout_constraintStart_toStartOf="@+id/CardNamaHewan"
+                app:layout_constraintTop_toBottomOf="@+id/CardNamaHewan" />
+
+            <Button
+                android:id="@+id/CardButtonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#1B5E20"
+                android:text="Edit"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/CardUmurHewan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="5 Tahun"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+            <Button
+                android:id="@+id/CardButtonDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#B71C1C"
+                android:text="Delete"
+                app:layout_constraintEnd_toEndOf="@+id/CardNamaHewan"
+                app:layout_constraintStart_toEndOf="@+id/CardButtonEdit"
+                app:layout_constraintTop_toTopOf="@+id/CardButtonEdit" />
+
+            <ImageView
+                android:id="@+id/Food"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/Sound"
+                app:layout_constraintStart_toStartOf="@+id/Sound"
+                app:layout_constraintTop_toBottomOf="@+id/Sound"
+                app:srcCompat="@drawable/ic_baseline_fastfood_24" />
+
+            <TextView
+                android:id="@+id/AnimalType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/CardNamaHewan"
+                app:layout_constraintTop_toBottomOf="@+id/CardNamaHewan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
